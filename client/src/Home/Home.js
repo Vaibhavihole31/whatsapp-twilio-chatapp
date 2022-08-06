@@ -46,7 +46,7 @@ function Home() {
 
         {
 
-          messages.map((message, i) => {
+messages && messages.map((message, i) => {
             if (message.direction === "incoming") {
               return (
                 //TODO retrun incoming message component with props

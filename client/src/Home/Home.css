@@ -1,0 +1,23 @@
+.app_card{
+    width: 100%;
+    margin-top: 30px;
+    padding: 5px;
+    border-radius: 10px 10px  10px 10px;
+    /* background-color: black; */
+    box-shadow: 0 4px 8px 0 rgba(118, 158, 226, 0.2), 0 6px 20px 0 rgba(96, 148, 239, 0.2);
+    border: 1px solid #f2f2f2;
+}
+.form_input{
+    width: 94%;
+    height: 40px;
+    border-radius: 5px;
+}
+.button{
+    margin-left: 10px;
+}
+/* .chatter{
+  background-color: tomato;
+  border-radius: 10px;
+  padding: 7px;
+  margin-top: 10px;
+} */

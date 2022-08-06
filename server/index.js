@@ -29,12 +29,6 @@ const PRIORITY_MAP = {
     "undelivered": 6
 }
 
-app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
-});
-
 app.get('/health', (req, res) => {
     res.json({
         success: true,
@@ -133,9 +127,16 @@ app.post('/receive', async (req, res) => {
 })
 
 app.get('/allmessage', async (req, res) => {
-    const send = await message.find();
-    res.send(send);
+    const messages = await message.find();
+    res.json(messages);
 })
+
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
+});
+
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);

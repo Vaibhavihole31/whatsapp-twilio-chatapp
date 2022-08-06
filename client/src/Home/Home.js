@@ -26,7 +26,7 @@ function Home() {
     }
     getMessages();
 
-  },trigger)
+  },[trigger])
 
   async function sendMessage (){
      console.log(to);

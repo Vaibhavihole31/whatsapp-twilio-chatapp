@@ -113,7 +113,7 @@ app.post('/receive', async (req, res) => {
         to: req.body.To,
         from: req.body.From,
         text: req.body.Body,
-        status: req.body.smsStatus,
+        status: req.body.SmsStatus,
         direction: 'incoming',
         createdAt: new Date().toISOString,
         updatedAt: new Date().toDateString
